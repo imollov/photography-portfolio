@@ -11,3 +11,179 @@
   src: local("Andale Mono Regular"),
     url("./assets/fonts/ANDALEMO.woff") format("woff");
 }
+
+body {
+  font-family: "Andale Mono Regular";
+}
+
+.main-content {
+  padding: 5rem 2.5rem;
+  text-align: center;
+}
+
+.main-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  padding: 1.5rem 2.5rem 1rem 2.5rem;
+  transition: all 0.3s ease;
+}
+
+.main-header.hide {
+  top: -70px;
+}
+
+.main-header__logo {
+  font-size: 1.4rem;
+  font-weight: 200;
+  letter-spacing: 1.3px;
+  padding: 0;
+}
+
+.main-nav {
+  display: none;
+}
+
+.mobile-nav {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100vh;
+  background: #fff;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.mobile-nav.open {
+  opacity: 0.95 !important;
+}
+
+body.nav-open {
+  overflow: hidden;
+}
+
+.mobile-nav__items {
+  list-style: none;
+  padding: 0;
+  margin-top: 8rem;
+  text-align: center;
+}
+
+.mobile-nav__item {
+  padding: 1rem 0;
+}
+
+#toggle-button {
+  width: 18px;
+  height: 24px;
+  position: absolute;
+  right: 2.5rem;
+  top: 1.55rem;
+  transform: rotate(0deg);
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+}
+
+#toggle-button span {
+  display: block;
+  position: absolute;
+  height: 2.5px;
+  width: 100%;
+  background: #000;
+  opacity: 1;
+  left: 0;
+  transform: rotate(0deg);
+  transition: 0.25s ease-in-out;
+}
+
+#toggle-button span:nth-child(1) {
+  top: 0px;
+}
+
+#toggle-button span:nth-child(2),
+#toggle-button span:nth-child(3) {
+  top: 10px;
+}
+
+#toggle-button span:nth-child(4) {
+  top: 20px;
+}
+
+#toggle-button.open span:nth-child(1) {
+  top: 16px;
+  width: 0%;
+  left: 50%;
+}
+
+#toggle-button.open span:nth-child(2) {
+  transform: rotate(45deg);
+}
+
+#toggle-button.open span:nth-child(3) {
+  transform: rotate(-45deg);
+}
+
+#toggle-button.open span:nth-child(4) {
+  top: 16px;
+  width: 0%;
+  left: 50%;
+}
+
+@media (min-width: 40rem) {
+  body {
+    display: grid;
+    grid-template-columns: 3fr 9fr;
+    grid-template-rows: auto 1fr;
+    grid-template-areas:
+      "header main"
+      "nav main";
+    grid-column-gap: 1rem;
+    max-width: 1400px;
+  }
+
+  .main-content {
+    grid-area: main;
+    padding-top: 4rem;
+  }
+
+  .main-header {
+    display: block;
+    z-index: 0;
+    width: auto;
+    position: static;
+    grid-area: header;
+    text-align: center;
+    padding: 0;
+    padding-top: 12rem;
+  }
+
+  .main-header__logo {
+    font-size: 1.6rem;
+    letter-spacing: 2.3px;
+    line-height: 1.5;
+    padding-bottom: 1.6rem;
+  }
+
+  .main-nav {
+    display: block;
+    grid-area: nav;
+  }
+
+  .main-nav__items {
+    padding: 0;
+    list-style: none;
+    text-align: center;
+  }
+
+  .main-nav__item {
+    font-size: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  #toggle-button {
+    display: none;
+  }
+}
