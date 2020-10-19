@@ -44,7 +44,7 @@
 
   if ("IntersectionObserver" in window) {
     var lazyImageObserver = new IntersectionObserver(function (entries) {
-      entries.forEach(async function (entry) {
+      entries.forEach(function (entry) {
         if (entry.isIntersecting) {
           var lazyImage = entry.target;
           lazyImage.src = lazyImage.dataset.src;
