@@ -85,7 +85,11 @@
   });
 
   function init() {
-    isMobile ? initMobile() : initDesktop();
+    if (isMobile) {
+      initMobile();
+    } else {
+      initDesktop();
+    }
   }
 
   function initMobile() {
