@@ -132,7 +132,29 @@ body.nav-open {
   left: 50%;
 }
 
-@media (min-width: 40rem) {
+.gallery__items {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+}
+
+.gallery__item {
+  padding-bottom: 1.5rem;
+}
+
+.photo {
+  width: 100%;
+}
+
+.photo--lazy {
+  filter: blur(10px);
+  transition: filter 300ms ease-in;
+}
+
+.photo--enhanced {
+  filter: blur(0);
+}
+
   body {
     display: grid;
     grid-template-columns: 3fr 9fr;
@@ -185,5 +207,25 @@ body.nav-open {
 
   #toggle-button {
     display: none;
+  }
+
+  .gallery__item {
+    height: calc(100vh - 6rem);
+    text-align: center;
+  }
+
+  .photo--landscape {
+    max-height: 600px;
+  }
+
+  .photo--portrait {
+    width: auto;
+    max-width: 600px;
+    max-height: 100%;
+    min-height: 600px;
+  }
+
+  .photo--portrait.photo--lazy {
+    height: 1000%;
   }
 }
