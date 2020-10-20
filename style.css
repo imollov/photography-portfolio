@@ -222,7 +222,7 @@ body.nav-open {
   }
 
   .photo--landscape {
-    max-height: 600px;
+    padding-top: 2rem;
   }
 
   .photo--portrait {
