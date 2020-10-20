@@ -48,10 +48,12 @@
         if (entry.isIntersecting) {
           var lazyImage = entry.target;
           lazyImage.src = lazyImage.dataset.src;
-          lazyImage.classList.remove("photo--lazy");
           lazyImageObserver.unobserve(lazyImage);
           lazyImage.addEventListener("load", function () {
             lazyImage.classList.add("photo--enhanced");
+            setTimeout(() => {
+              lazyImage.classList.remove("photo--lazy");
+            }, 300);
           });
         }
       });
