@@ -164,7 +164,7 @@ body.nav-open {
 @media (min-width: 52rem) {
   body {
     display: grid;
-    grid-template-columns: 14rem auto;
+    grid-template-columns: 3fr 9fr;
     grid-template-rows: auto 1fr;
     grid-template-areas:
       "header main"
@@ -185,6 +185,7 @@ body.nav-open {
     position: static;
     grid-area: header;
     text-align: center;
+    margin: auto;
     padding: 10rem 0 0 0;
     background: none;
   }
@@ -194,6 +195,7 @@ body.nav-open {
     letter-spacing: 2.3px;
     line-height: 1.5;
     padding-bottom: 1.6rem;
+    width: 200px;
   }
 
   .main-nav {
