@@ -19,6 +19,15 @@ body {
   min-width: 320px;
 }
 
+a[href] {
+  text-decoration: none;
+  color: #000;
+}
+
+a[href].active {
+  color: #9b9b9b;
+}
+
 .main-content {
   padding: 5rem 2.5rem;
   text-align: center;
