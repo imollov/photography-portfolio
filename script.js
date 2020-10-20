@@ -51,7 +51,9 @@
           lazyImageObserver.unobserve(lazyImage);
           lazyImage.addEventListener("load", function () {
             lazyImage.classList.add("photo--enhanced");
-            lazyImage.classList.remove("photo--lazy");
+            setTimeout(() => {
+              lazyImage.classList.remove("photo--lazy");
+            }, 300);
           });
         }
       });
