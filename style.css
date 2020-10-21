@@ -231,7 +231,6 @@ body.nav-open {
   }
 
   .gallery__item {
-    text-align: left;
     cursor: pointer;
   }
 
@@ -244,7 +243,6 @@ body.nav-open {
     height: 88vh;
     max-height: 900px;
     min-height: 600px;
-    padding-left: 2rem;
   }
 }
 
