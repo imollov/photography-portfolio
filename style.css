@@ -41,7 +41,7 @@ a[href].active {
   z-index: 100;
   padding: 1.5rem 2.5rem 1rem 2.5rem;
   background: #fff;
-  transition: all 0.3s ease;
+  transition: top 0.3s ease;
 }
 
 .main-header.hide {
