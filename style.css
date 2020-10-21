@@ -282,6 +282,8 @@ body.nav-open {
 
   .photo--landscape {
     padding-top: 0;
+    width: 70vw;
+    max-width: 900px;
   }
 
   .photo--portrait {
