@@ -15,7 +15,7 @@
 }
 
 body {
-  font-family: "Andale Mono Regular";
+  font-family: "Andale Mono Regular", monospace;
   min-width: 320px;
 }
 
