@@ -75,7 +75,8 @@
  */
 (function () {
   var items = document.querySelectorAll(".gallery__item");
-  var container = document.querySelector(".gallery");
+  var prev = document.getElementById("prev");
+  var next = document.getElementById("next");
   var isMobile = isMobileSize();
   var current = 0;
 
@@ -100,7 +101,8 @@
     items.forEach(function (_, idx) {
       showItem(idx);
     });
-    container.removeEventListener("click", nextItem);
+    prev.removeEventListener("click", prevItem);
+    next.removeEventListener("click", nextItem);
   }
 
   function initDesktop() {
@@ -108,7 +110,8 @@
       hideItem(idx);
     });
     showItem(current);
-    container.addEventListener("click", nextItem);
+    prev.addEventListener("click", prevItem);
+    next.addEventListener("click", nextItem);
   }
 
   function nextItem() {

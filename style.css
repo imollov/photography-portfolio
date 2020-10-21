@@ -148,10 +148,13 @@ body.nav-open {
   left: 50%;
 }
 
+.gallery__nav {
+  display: none;
+}
+
 .gallery__items {
   list-style: none;
   padding: 0;
-  margin: 0 auto;
 }
 
 .gallery__item {
@@ -230,8 +233,51 @@ body.nav-open {
     display: none;
   }
 
-  .gallery__item {
+  .gallery {
+    display: inline-flex;
+    justify-content: center;
+    position: relative;
+  }
+
+  .gallery__nav {
+    display: flex;
+    position: absolute;
+    z-index: 1;
+    width: 50%;
+    height: 100%;
+    padding-top: 16rem;
     cursor: pointer;
+    transition: margin 200ms ease-in-out;
+  }
+
+  .gallery__nav span {
+    font-size: 1.3rem;
+    user-select: none;
+  }
+
+  .gallery__nav#prev {
+    top: 0;
+    left: 0;
+    margin-left: -2rem;
+  }
+
+  .gallery__nav#prev:hover {
+    margin-left: -2.5rem;
+  }
+
+  .gallery__nav#next {
+    top: 0;
+    right: 0;
+    margin-right: -2rem;
+    justify-content: flex-end;
+  }
+
+  .gallery__nav#next:hover {
+    margin-right: -2.5rem;
+  }
+
+  .photo {
+    user-select: none;
   }
 
   .photo--landscape {
