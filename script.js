@@ -135,6 +135,47 @@
 })();
 
 /*
+ * Hide header on scroll down & show on scroll up
+ */
+(function () {
+  var doc = document.documentElement;
+  var w = window;
+
+  var prevScroll = w.scrollY || doc.scrollTop;
+  var curScroll;
+  var direction = 0;
+  var prevDirection = 0;
+  var headerHeightPx = 70;
+
+  var header = document.querySelector(".main-header");
+
+  window.addEventListener("scroll", checkScroll);
+
+  function checkScroll() {
+    curScroll = w.scrollY || doc.scrollTop;
+    if (curScroll > prevScroll) {
+      direction = 2; //scrolled up
+    } else if (curScroll < prevScroll) {
+      direction = 1; //scrolled down
+    }
+    if (direction !== prevDirection) {
+      toggleHeader(direction, curScroll);
+    }
+    prevScroll = curScroll;
+  }
+
+  function toggleHeader(direction, curScroll) {
+    if (direction === 2 && curScroll > headerHeightPx) {
+      header.classList.add("hide");
+      prevDirection = direction;
+    } else if (direction === 1) {
+      header.classList.remove("hide");
+      prevDirection = direction;
+    }
+  }
+})();
+
+/*
  * Utils
  */
 function isMobileSize() {
