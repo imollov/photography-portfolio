@@ -169,7 +169,7 @@ body.nav-open {
 
 .photo--lazy {
   filter: blur(10px);
-  transition: filter 300ms ease-in;
+  transition: filter 0.2s ease-out;
 }
 
 .photo--enhanced {
