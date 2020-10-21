@@ -278,6 +278,7 @@ body.nav-open {
 
   .photo {
     user-select: none;
+    width: auto;
   }
 
   .photo--landscape {
