@@ -284,6 +284,7 @@ body.nav-open {
     padding-top: 0;
     width: 70vw;
     max-width: 900px;
+    padding-top: 1rem;
   }
 
   .photo--portrait {
