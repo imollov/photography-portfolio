@@ -92,6 +92,11 @@ body.nav-open {
   padding: 1rem 0;
 }
 
+.mobile-nav__license {
+  text-align: center;
+  padding-top: 2rem;
+}
+
 #toggle-button {
   width: 18px;
   height: 24px;
@@ -176,6 +181,10 @@ body.nav-open {
   filter: blur(0);
 }
 
+.license {
+  display: none;
+}
+
 @media (min-width: 52rem) {
   body {
     display: grid;
@@ -241,6 +250,10 @@ body.nav-open {
     position: relative;
   }
 
+  .gallery__item {
+    padding: 0;
+  }
+
   .gallery__nav {
     display: flex;
     position: absolute;
@@ -294,6 +307,10 @@ body.nav-open {
     height: 88vh;
     max-height: 900px;
     min-height: 400px;
+  }
+
+  .license {
+    display: block;
   }
 }
 
