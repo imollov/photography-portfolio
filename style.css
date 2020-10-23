@@ -185,6 +185,11 @@ body.nav-open {
   display: none;
 }
 
+.icon--small {
+  width: 12px;
+  height: 12px;
+}
+
 @media (min-width: 52rem) {
   body {
     display: grid;
