@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Towns / Ivelin Mollov</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header class="main-header">
+      <h1 class="main-header__logo"><a href="index.html">Ivelin Mollov</a></h1>
+      <div id="toggle-button">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </header>
+    <nav class="main-nav">
+      <ul class="main-nav__items">
+        <li class="main-nav__item"><a href="fences.html">Fences</a></li>
+        <li class="main-nav__item">
+          <a class="active" href="towns.html">Towns</a>
+        </li>
+        <li class="main-nav__item"><a href="bw.html">B&W</a></li>
+      </ul>
+    </nav>
+    <nav class="mobile-nav">
+      <ul class="mobile-nav__items">
+        <li class="mobile-nav__item"><a href="fences.html">Fences</a></li>
+        <li class="mobile-nav__item">
+          <a class="active" href="towns.html">Towns</a>
+        </li>
+        <li class="mobile-nav__item"><a href="bw.html">B&W</a></li>
+      </ul>
+    </nav>
+    <main class="main-content">
+      <div class="gallery">
+        <div id="prev" class="gallery__nav"><span>&lt;</span></div>
+        <ul class="gallery__items">
+          <li class="gallery__item">
+            <img
+              src="./assets/photos/towns/florence_preview.jpg"
+              data-src="./assets/photos/towns/florence.jpg"
+              alt="A photo taken in Florence, Italy"
+              class="photo photo--portrait photo--lazy"
+            />
+          </li>
+          <li class="gallery__item">
+            <img
+              src="./assets/photos/towns/florence2_preview.jpg"
+              data-src="./assets/photos/towns/florence2.jpg"
+              alt="A photo taken in Florence, Italy"
+              class="photo photo--portrait photo--lazy"
+            />
+          </li>
+          <li class="gallery__item">
+            <img
+              src="./assets/photos/towns/sofia_preview.jpg"
+              data-src="./assets/photos/towns/sofia.jpg"
+              alt="A photo taken in Sofia, Bulgaria"
+              class="photo photo--portrait photo--lazy"
+            />
+          </li>
+          <li class="gallery__item">
+            <img
+              src="./assets/photos/towns/barcelona_preview.jpg"
+              data-src="./assets/photos/towns/barcelona.jpg"
+              alt="A photo taken in Barcelona, Spain"
+              class="photo photo--portrait photo--lazy"
+            />
+          </li>
+          <li class="gallery__item">
+            <img
+              src="./assets/photos/towns/berlin_preview.jpg"
+              data-src="./assets/photos/towns/berlin.jpg"
+              alt="A photo taken in Berlin, Germany"
+              class="photo photo--portrait photo--lazy"
+            />
+          </li>
+          <li class="gallery__item">
+            <img
+              src="./assets/photos/towns/berlin2_preview.jpg"
+              data-src="./assets/photos/towns/berlin2.jpg"
+              alt="A photo taken in Berlin, Germany"
+              class="photo photo--portrait photo--lazy"
+            />
+          </li>
+        </ul>
+        <div id="next" class="gallery__nav"><span>&gt;</span></div>
+      </div>
+    </main>
+    <script src="./script.js"></script>
+  </body>
+</html>
