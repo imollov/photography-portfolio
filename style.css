@@ -11,7 +11,7 @@
   font-style: normal;
   font-weight: normal;
   src: local("Andale Mono Regular"),
-    url("./assets/fonts/ANDALEMO.woff") format("woff");
+    url("../assets/fonts/ANDALEMO.woff") format("woff");
 }
 
 body {

@@ -6,8 +6,8 @@
     "watch:css": "onchange 'style.css' -- npm run build:css",
     "watch:js": "onchange 'script.js' -- npm run build:js",
     "build": "npm run build:css && npm run build:js",
-    "build:css": "postcss style.css --use=autoprefixer | cssmin > style.min.css",
-    "build:js": "minify script.js > script.min.js",
+    "build:css": "postcss style.css --use=autoprefixer | cssmin > dist/style.min.css",
+    "build:js": "minify script.js > dist/script.min.js",
     "jshint": "jshint script.js"
   },
   "browserslist": [
